@@ -74,7 +74,9 @@ int main() {
 	float diff ((float)t2 - (float)t1);
 	diff = diff / CLOCKS_PER_SEC;
 
-	output_file << diff << "\t" << (1 - sWeight) * sarr[sIndex] + sWeight * sarr[sIndex + 1] << "\t" << (1 - vWeight) * varr[vIndex] + vWeight * varr[vIndex + 1] << "\t" << (1 - rWeight) * rarr[rIndex] + rWeight * rarr[rIndex + 1] << "\t" << interestedV << "\t" << fairfee << "\n";
+    std::cout << "The calculated fair fee is " << fairfee << "\n";
+
+	/* output_file << diff << "\t" << (1 - sWeight) * sarr[sIndex] + sWeight * sarr[sIndex + 1] << "\t" << (1 - vWeight) * varr[vIndex] + vWeight * varr[vIndex + 1] << "\t" << (1 - rWeight) * rarr[rIndex] + rWeight * rarr[rIndex + 1] << "\t" << interestedV << "\t" << fairfee << "\n"; */
 	output_file << std::setw(20) << "b: " << std::setw(20) << "r: " << std::setw(20) << "v: " << std::setw(20) << "s: " << std::setw(20) << "value: " << "\n";
 
 	for (long bb = 0; bb< (Bnum + 1); bb++) {

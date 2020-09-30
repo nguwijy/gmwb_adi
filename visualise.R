@@ -1,7 +1,6 @@
 library(plot3D)
 
-df <- read.table("~/Dropbox/Projects/fyp/adi_c++/5Y_douglas_Anew.txt", header = TRUE)
-#df <- read.table("/Users/nguwijy/Desktop/fyp/adi_new/output.txt", header = TRUE)
+df <- read.table("5Y_douglas_Anew.txt", header = TRUE)
 snum <- 20
 vnum <- 4
 rnum <- 10
@@ -23,4 +22,3 @@ for (bb in 0:bnum) {
 }
 
 persp3D(x=df_s[1:10], y=df_b, z=df_z[1:10,], theta=-50, phi=10, expand=0.75, ticktype="detailed", xlab="S", ylab="B", zlab="u value", main=paste("r = ", df_r[i+1], ", v = ", df_v[j+1], split = ""),axes=TRUE)
-#persp3D(x=df_s, y=df_b, z=df_z, theta=-50, phi=10, expand=0.75, ticktype="detailed", xlab="S", ylab="B", zlab="u value", main=paste("r = ", df_r[i+1], ", v = ", df_v[j+1], split = ""),axes=TRUE)
